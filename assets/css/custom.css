@@ -1,0 +1,411 @@
+/* Custom styles for WebdesAIn */
+
+/* Soft pastel gradient background */
+body {
+    background: linear-gradient(135deg, #E3F5EF 0%, #E8F5F0 12%, #EDF5F1 24%, #F1F5F1 36%, #F4F4F0 48%, #F6F3ED 60%, #FAF1EC 72%, #FDF0EF 84%, #FFF0F3 100%) !important;
+    background-attachment: fixed !important;
+    color: #333333 !important;
+    font-size: 1.125rem !important;
+}
+
+/* Increase text size globally */
+p, li, span, a {
+    font-size: 1.125rem !important;
+}
+
+/* Override bg-iceblue class */
+body.bg-iceblue {
+    background: linear-gradient(135deg, #E3F5EF 0%, #E8F5F0 12%, #EDF5F1 24%, #F1F5F1 36%, #F4F4F0 48%, #F6F3ED 60%, #FAF1EC 72%, #FDF0EF 84%, #FFF0F3 100%) !important;
+    background-attachment: fixed !important;
+    color: #333333 !important;
+}
+
+/* Logo styling */
+.header-logo h1 {
+    font-weight: 600 !important;
+}
+
+/* Hero title - show/hide based on screen size */
+.hero-title-mobile {
+    display: none;
+}
+
+.hero-title-desktop {
+    display: block;
+}
+
+/* Hero image border radius */
+#home .img-mask-1 img {
+    border-radius: 1em;
+}
+
+/* Lektorka image border radius */
+#lektorka .img-mask-1 img {
+    border-radius: 1em;
+}
+
+/* Add more space above "Obsah kurzu" section */
+#lekce {
+    padding-top: 120px !important;
+}
+
+/* Lekce container - 80% width */
+#lekce .container > * {
+    max-width: 80%;
+}
+
+/* Subtitle with h5 styling */
+.subtitle-style {
+    font-size: 1.25rem !important;
+    font-weight: 500 !important;
+    line-height: 1.2 !important;
+    margin-bottom: 0.5rem !important;
+}
+
+/* Outfit semibold style */
+.outfit-semibold {
+    font-family: 'Outfit', sans-serif !important;
+    font-weight: 500 !important;
+    font-size: 1.3rem !important;
+}
+
+/* Ensure spans inside outfit-semibold have same size */
+.outfit-semibold span {
+    font-size: inherit !important;
+}
+
+/* Ensure spans inside h1 have same size */
+h1 span {
+    font-size: inherit !important;
+}
+
+/* Subtle link styling in headings */
+h2 a {
+    color: inherit !important;
+    text-decoration: none !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    transition: border-color 0.3s ease;
+    font-size: inherit !important;
+}
+
+h2 a:hover {
+    border-bottom-color: #ff2f78;
+}
+
+/* H2 headings styling */
+h2 {
+    font-size: 3rem !important;
+    font-family: 'Outfit', sans-serif !important;
+}
+
+/* H3 headings styling (lesson titles) */
+h3 {
+    font-size: 2rem !important;
+    font-family: 'Lora', serif !important;
+}
+
+/* Lesson titles - smaller font */
+#lekce h3 {
+    font-size: 1.5rem !important;
+    margin-bottom: 0.5rem !important;
+}
+
+/* Reduce spacing between lessons */
+#lekce .py-4,
+#lekce .py-lg-5 {
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important;
+}
+
+/* Jemnější oddělení lekcí - tečkovaná čára */
+#lekce hr.hr-diagonal {
+    height: 2px !important;
+    background: transparent !important;
+    border: none !important;
+    border-top: 2px dotted rgba(0, 0, 0, 0.25) !important;
+}
+
+#lekce hr.hr-diagonal:before {
+    display: none !important;
+}
+
+/* Align lesson icons vertically with heading */
+#lekce .d-flex {
+    align-items: flex-start !important;
+}
+
+#lekce .icon-3xl {
+    padding-top: 0.2rem;
+    line-height: 1;
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+}
+
+#lekce .icon-3xl i {
+    display: block;
+    line-height: 1;
+}
+
+/* Pink dots in lesson descriptions */
+#lekce ul.list-inline-dot li:before {
+    background: #ff2f78 !important;
+}
+
+/* Lesson duration styling - desktop (vpravo) */
+.lesson-duration {
+    white-space: nowrap;
+    padding-left: 2rem;
+    padding-top: 0.5rem;
+    min-width: 80px;
+    display: block;
+}
+
+.lesson-duration span {
+    display: block;
+    line-height: 1.2;
+}
+
+.lesson-duration .duration-number {
+    font-size: 2rem;
+    font-family: 'Lora', serif;
+    font-weight: 600;
+    color: #333;
+}
+
+.lesson-duration .duration-unit {
+    font-size: 0.85rem;
+    color: #666;
+    font-weight: 400;
+}
+
+/* Lesson duration styling - mobile (dole) */
+.lesson-duration-mobile {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #666;
+    display: none;
+}
+
+.lesson-duration-mobile .duration-number {
+    font-family: 'Lora', serif;
+    font-weight: 600;
+    color: #333;
+    margin-right: 0.25rem;
+}
+
+.lesson-duration-mobile .duration-unit {
+    font-weight: 400;
+}
+
+/* Mobile responsive styles */
+@media (max-width: 767px) {
+    /* Hero title - switch to mobile version */
+    .hero-title-desktop {
+        display: none !important;
+    }
+
+    .hero-title-mobile {
+        display: block !important;
+    }
+
+    /* Headings size adjustments */
+    h1.display-1 {
+        font-size: 2.5rem !important;
+    }
+
+    h2 {
+        font-size: 2rem !important;
+    }
+
+    h3 {
+        font-size: 1.5rem !important;
+    }
+
+    #lekce h3 {
+        font-size: 1.2rem !important;
+    }
+
+    h5 {
+        font-size: 1.1rem !important;
+    }
+
+    /* Lesson descriptions - smaller text on mobile */
+    #lekce ul.list-inline-dot li {
+        font-size: 0.95rem !important;
+    }
+
+    /* Lesson duration on mobile - hide desktop, show mobile */
+    .lesson-duration {
+        display: none !important;
+    }
+
+    .lesson-duration-mobile {
+        display: inline !important;
+    }
+
+    /* Lesson section padding adjustments */
+    #lekce .py-4,
+    #lekce .py-lg-5 {
+        padding-top: 1rem !important;
+        padding-bottom: 1rem !important;
+    }
+
+    #lekce .px-lg-4,
+    #lekce .px-xl-5 {
+        padding-left: 0.5rem !important;
+        padding-right: 0.5rem !important;
+    }
+
+    /* Icon size on mobile */
+    #lekce .icon-3xl {
+        font-size: 0.8rem !important;
+        padding-top: 0.4rem;
+        display: flex;
+        align-items: flex-start;
+    }
+
+    #lekce .icon-3xl i {
+        margin-top: 0.1rem;
+    }
+
+    #lekce .pe-4 {
+        padding-right: 0.75rem !important;
+    }
+
+    /* Cílová skupina cards */
+    #o-kurzu .bg-white {
+        padding: 1.5rem !important;
+    }
+
+    /* Features section icons */
+    .icon-4xl i {
+        font-size: 2.5rem !important;
+    }
+
+    /* Body text size */
+    body, p, li, span, a {
+        font-size: 1rem !important;
+    }
+
+    /* Outfit semibold on mobile */
+    .outfit-semibold {
+        font-size: 1.1rem !important;
+    }
+
+    /* Subtitle style on mobile */
+    .subtitle-style {
+        font-size: 1.1rem !important;
+    }
+
+    /* Header adjustments */
+    .header-logo h1 {
+        font-size: 1.5rem !important;
+    }
+
+    /* Navigation button size */
+    .button-sm {
+        font-size: 0.875rem !important;
+        padding: 0.5rem 1rem !important;
+    }
+
+    /* Testimonials on mobile */
+    .testimonial-slider-2 {
+        width: 100% !important;
+        margin: 0 auto !important;
+    }
+
+    .testimonial-quote-box {
+        padding: 1.5rem !important;
+    }
+
+    .testimonial-quote-box .quote p {
+        font-size: 1rem !important;
+    }
+
+    /* Testimonials section heading */
+    .section-spacing.pt-0 .row.align-items-center > .col-12:first-child {
+        width: 100% !important;
+        margin: 0 auto !important;
+    }
+
+    /* Footer adjustments */
+    #kontakt h4 {
+        font-size: 1.3rem !important;
+    }
+
+    /* Section spacing on mobile */
+    .section-spacing {
+        padding-top: 3rem !important;
+        padding-bottom: 3rem !important;
+    }
+
+    .section-spacing-sm {
+        padding-top: 2rem !important;
+        padding-bottom: 2rem !important;
+    }
+
+    /* Lekce container full width on mobile */
+    #lekce .container > * {
+        max-width: 100% !important;
+    }
+
+    /* Hero section stats adjustment */
+    #home h2.font-family-tertiary {
+        font-size: 3rem !important;
+    }
+
+    /* Align lesson content better on mobile */
+    #lekce .d-flex.justify-content-between {
+        flex-wrap: wrap;
+    }
+
+    /* Testimonial heading size on mobile */
+    #lektorka h2 {
+        font-size: 1.8rem !important;
+    }
+
+    /* Reference circles on mobile */
+    .button-circle {
+        width: 40px !important;
+        height: 40px !important;
+    }
+
+    .button-circle i {
+        font-size: 1rem !important;
+    }
+
+    /* Lektorka image 90% width, aligned left with text on mobile */
+    #lektorka .col-12.col-lg-5 {
+        padding-right: calc(10% + 15px) !important;
+    }
+
+    #lektorka .img-mask-1 {
+        margin: 0 !important;
+    }
+}
+
+/* Tablet responsive styles */
+@media (min-width: 768px) and (max-width: 991px) {
+    /* Lesson section adjustments for tablet */
+    #lekce .container > * {
+        max-width: 90% !important;
+    }
+
+    #lekce h3 {
+        font-size: 1.4rem !important;
+    }
+
+    #lekce ul.list-inline-dot li {
+        font-size: 1rem !important;
+    }
+
+    /* Headings on tablet */
+    h2 {
+        font-size: 2.5rem !important;
+    }
+
+    h1.display-1 {
+        font-size: 3rem !important;
+    }
+}

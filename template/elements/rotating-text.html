@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<title>Elements - Rotating Text</title>
+		<!-- Favicon -->
+		<link href="../assets/images/favicon.png" rel="shortcut icon">
+		<!-- CSS -->
+		<link href="../assets/plugins/bootstrap/bootstrap.min.css" rel="stylesheet">
+		<link href="../assets/plugins/glightbox/glightbox.min.css" rel="stylesheet">
+		<link href="../assets/plugins/scrollcue/scrollcue.css" rel="stylesheet">
+		<link href="../assets/plugins/swiper/swiper-bundle.min.css" rel="stylesheet">
+		<link href="../assets/plugins/prism/prism.css" rel="stylesheet">
+		<link href="../assets/css/theme.css" rel="stylesheet">
+		<!-- Fonts/Icons -->
+		<link href="../assets/plugins/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+		<link href="../assets/plugins/fontawesome/css/all.css" rel="stylesheet">
+		<link href="../assets/plugins/themify/themify-icons.css" rel="stylesheet">
+	</head>
+	<body data-preloader="light">
+
+		<main>
+
+			<div class="section-spacing-sm bg-dark">
+				<div class="container">
+					<div class="h1 display-5 fw-medium text-center">Rotating Text</div>
+				</div>
+			</div>
+			<div class="section-spacing">
+				<div class="container text-center">
+					<div class="circle-text">
+						<svg class="circle-svg rotating" viewBox="0 0 200 200">
+							<path id="textPath" d="M 85,0 A 85,85 0 0 1 -85,0 A 85,85 0 0 1 85,0" transform="translate(100,100)" fill="none" stroke="rgba(28, 29, 36, 0.1)" stroke-width="10"></path>
+							<text text-anchor="start">
+								<textPath xlink:href="#textPath" textLength="300%">First text - Second text - Third text - Fourth text</textPath>
+							</text>
+						</svg>
+					</div>
+
+					<a class="button button-md button-radius button-fullwidth mt-4" data-bs-toggle="collapse" href="#rtext1" role="button" aria-expanded="false" aria-controls="rtext1">View Example's Code <i class="fa-solid fa-angle-down ps-1"></i></a>
+					<div class="collapse" id="rtext1">
+<pre class="language-html m-0">
+<code>
+&lt;div class="circle-text"&gt;
+	&lt;svg class="circle-svg rotating" viewBox="0 0 200 200"&gt;
+		&lt;path id="textPath" d="M 85,0 A 85,85 0 0 1 -85,0 A 85,85 0 0 1 85,0" transform="translate(100,100)" fill="none" stroke="rgba(28, 29, 36, 0.1)" stroke-width="10"&gt;&lt;/path&gt;
+		&lt;text text-anchor="start"&gt;
+			&lt;textPath xlink:href="#textPath" textLength="300%"&gt;First text - Second text - Third text - Fourth text&lt;/textPath&gt;
+		&lt;/text&gt;
+	&lt;/svg&gt;
+&lt;/div&gt;
+</code>
+</pre>
+					</div>
+				</div><!-- end container -->
+			</div>
+
+
+			<div class="section-spacing-sm bg-dark">
+				<div class="container">
+					<div class="h1 display-5 fw-medium text-center">Rotating Text - Icon inside</div>
+				</div>
+			</div>
+			<div class="section-spacing">
+				<div class="container text-center">
+					<div class="circle-text">
+						<svg class="circle-svg rotating" viewBox="0 0 200 200">
+							<path id="textPath1" d="M 85,0 A 85,85 0 0 1 -85,0 A 85,85 0 0 1 85,0" transform="translate(100,100)" fill="none" stroke="rgba(28, 29, 36, 0.1)" stroke-width="10"></path>
+							<text text-anchor="start">
+								<textPath xlink:href="#textPath1" textLength="300%">First text - Second text - Third text - Fourth text</textPath>
+							</text>
+						</svg>
+						<div class="circle-text-inner icon-4xl text-gradient-1">
+							<i class="ti-crown"></i>
+						</div>
+					</div>
+
+					<a class="button button-md button-radius button-fullwidth mt-4" data-bs-toggle="collapse" href="#rtext2" role="button" aria-expanded="false" aria-controls="rtext2">View Example's Code <i class="fa-solid fa-angle-down ps-1"></i></a>
+					<div class="collapse" id="rtext2">
+<pre class="language-html m-0">
+<code>
+&lt;div class="circle-text"&gt;
+	&lt;svg class="circle-svg rotating" viewBox="0 0 200 200"&gt;
+		&lt;path id="textPath" d="M 85,0 A 85,85 0 0 1 -85,0 A 85,85 0 0 1 85,0" transform="translate(100,100)" fill="none" stroke="rgba(28, 29, 36, 0.1)" stroke-width="10"&gt;&lt;/path&gt;
+		&lt;text text-anchor="start"&gt;
+			&lt;textPath xlink:href="#textPath" textLength="300%"&gt;First text - Second text - Third text - Fourth text&lt;/textPath&gt;
+		&lt;/text&gt;
+	&lt;/svg&gt;
+	&lt;div class="circle-text-inner icon-4xl text-gradient-1"&gt;
+		&lt;i class="ti-crown"&gt;&lt;/i&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+</code>
+</pre>
+					</div>
+				</div><!-- end container -->
+			</div>
+
+			
+
+		</main>
+
+		<!-- Cursors -->
+		<div class="cursors">
+			<div class="cursor-inner"></div>
+		</div>
+		<!-- end Cursors -->
+
+		<!-- Scroll to Top -->
+		<div class="scrolltotop icon-lg">
+			<i class="bi bi-arrow-up-short"></i>
+		</div>
+		<!-- end Scroll to Top -->
+
+		<!-- JavaScripts -->
+		<script src="../assets/plugins/jquery.min.js"></script>
+		<script src="../assets/plugins/plugins.js"></script>
+		<script src="../assets/plugins/prism/prism.js"></script>
+		<script src="../assets/js/functions.js"></script>
+	</body>
+</html>
