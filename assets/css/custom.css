@@ -58,10 +58,7 @@ body.bg-iceblue {
     padding-top: 120px !important;
 }
 
-/* Lekce container - 80% width */
-#lekce .container>* {
-    max-width: 80%;
-}
+
 
 /* Subtitle with h5 styling */
 .subtitle-style {
@@ -148,17 +145,30 @@ h3 {
     align-items: flex-start !important;
 }
 
-#lekce .icon-3xl {
+#lekce .icon-2xl {
     padding-top: 0.2rem;
     line-height: 1;
     margin-top: 0;
     display: flex;
     align-items: center;
+    width: 2.8rem;
+    /* Fixed width to ensure alignment of text even with double-digit numbers */
+    flex-shrink: 0;
 }
 
-#lekce .icon-3xl i {
+#lekce .icon-2xl i {
     display: block;
     line-height: 1;
+}
+
+/* Pouze číslo 10 posuneme doleva, text zůstane zarovnaný díky pevné šířce kontejneru */
+#lekce .icon-2xl:has(i:nth-child(2)) i {
+    margin-left: -0.5rem;
+}
+
+/* Mezera mezi 1 a 0 */
+#lekce .icon-2xl:has(i:nth-child(2)) i:first-child {
+    margin-right: 0.15rem;
 }
 
 /* Pink dots in lesson descriptions */
@@ -375,10 +385,7 @@ h3 {
         padding-bottom: 2rem !important;
     }
 
-    /* Lekce container full width on mobile */
-    #lekce .container>* {
-        max-width: 100% !important;
-    }
+
 
     /* Hero section stats adjustment */
     #home h2.font-family-tertiary {
@@ -418,10 +425,7 @@ h3 {
 /* Tablet responsive styles */
 @media (min-width: 768px) and (max-width: 991px) {
 
-    /* Lesson section adjustments for tablet */
-    #lekce .container>* {
-        max-width: 90% !important;
-    }
+
 
     #lekce h3 {
         font-size: 1.4rem !important;
@@ -454,4 +458,53 @@ main {
 .header {
     left: 0 !important;
     right: 0 !important;
+}
+
+/* Mobile adjustments - precise user requests */
+@media (max-width: 767px) {
+
+    /* 1. Width 90% */
+    .header,
+    main,
+    .container,
+    .container-fluid {
+        width: 90% !important;
+        max-width: 90% !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    /* Fix header centering for 90% width */
+    .header {
+        left: 5% !important;
+        right: 5% !important;
+    }
+
+    /* 2. Remove contact button */
+    .header-extra {
+        display: none !important;
+    }
+
+    /* 3. Smaller logo, no deformation */
+    .header-logo img {
+        height: 30px !important;
+        width: auto !important;
+        object-fit: contain !important;
+    }
+
+    /* 4. Smaller headings H2, H3 */
+    h2 {
+        font-size: 1.75rem !important;
+    }
+
+    h3 {
+        font-size: 1.3rem !important;
+    }
+
+    /* 5. Add spacing above first pricing box */
+    #cenik .row.g-4>div:first-child {
+        margin-top: 50px !important;
+    }
 }
