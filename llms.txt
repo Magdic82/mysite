@@ -1,0 +1,24 @@
+# WebdesAIn - Tvorba webových stránek v době AI
+
+Online kurz zaměřený na využití umělé inteligence (Claude Code, Google Antigravity) při tvorbě moderních a profesionálních webových stránek bez nutnosti hlubokého kódování (Vibe Coding).
+
+## Klíčové informace
+
+- **Lektorka:** Magdaléna Boušková (Webová mentorka)
+- **Obsah:** 10 praktických lekcí + 8 bonusových témat
+- **Metoda:** Vibe Coding - AI agent tvoří kód, uživatel řídí proces
+- **Cílová skupina:** Webdesignéři, marketingoví specialisti, studenti, majitelé firem
+- **Kontakt:** magdalena@strategickyweb.cz
+- **URL:** https://webdesain.cz/
+
+## Kurzy a Ceny
+
+1. **Živé školení:** 6 500 Kč (Kamenice u Prahy, 17. února)
+2. **Online samostudium:** 8 500 Kč (v prodeji od 15. února)
+3. **Online s podporou:** 8 700 Kč (dotovaný kurz, duben-červen)
+
+## Technické Specifikace
+
+- Postaveno na moderním HTML5/CSS3
+- Mobile-first responsivní design
+- Optimalizováno pro AI agenty a LLM modely

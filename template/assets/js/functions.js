@@ -34,7 +34,7 @@
 ===============================================*/
 var body = document.body;
 
-window.addEventListener("load", function() {
+window.addEventListener("load", function () {
   document.body.classList.add("loaded");
 });
 
@@ -97,7 +97,7 @@ accordionTitles.forEach(function (accordionTitle) {
 var bgImages = document.querySelectorAll(".bg-image");
 
 if (bgImages) {
-  bgImages.forEach(function(bgImage) {
+  bgImages.forEach(function (bgImage) {
     var bgData = bgImage.getAttribute("data-bg-src");
     bgImage.style.backgroundImage = 'url("' + bgData + '")';
   });
@@ -107,7 +107,7 @@ if (bgImages) {
 /*===============================================
   4. Contact Form
 ===============================================*/
-$("#contactform").on("submit", function(e) {
+$("#contactform").on("submit", function (e) {
   var name = $("#name").val();
   var email = $("#email").val();
   var subject = $("#subject").val();
@@ -128,16 +128,16 @@ $("#contactform").on("submit", function(e) {
 
   else {
     $.ajax({
-      url:"/assets/php/contact-form.php",
-      data:$(this).serialize(),
-      type:"POST",
-      success:function(data){
+      url: "/assets/php/contact-form.php",
+      data: $(this).serialize(),
+      type: "POST",
+      success: function (data) {
         $("#success").addClass("show-result"); //=== Show Success Message==
-        $("#contactform").each(function(){
+        $("#contactform").each(function () {
           this.reset();
         });
       },
-      error:function(data){
+      error: function (data) {
         $("#error").addClass("show-result"); //===Show Error Message====
       }
     });
@@ -152,21 +152,21 @@ $("#contactform").on("submit", function(e) {
 /*===============================================
   5. Counter
 ===============================================*/
-$(".counter").appear(function() {
+$(".counter").appear(function () {
 
   $(this).each(function () {
-    $(this).prop("Counter",0).animate({
-        Counter: $(this).text()
+    $(this).prop("Counter", 0).animate({
+      Counter: $(this).text()
     }, {
-        duration: 2000,
-        easing: "swing",
-        step: function (now) {
-            $(this).text(Math.ceil(now));
-        }
+      duration: 2000,
+      easing: "swing",
+      step: function (now) {
+        $(this).text(Math.ceil(now));
+      }
     });
   });
-  
-},{accX: 0, accY: -10});
+
+}, { accX: 0, accY: -10 });
 
 
 /*===============================================
@@ -180,8 +180,7 @@ const hoverText = document.querySelectorAll("div[data-hover-text]");
 const hoverTextDark = document.querySelectorAll("div[data-hover-text-dark]");
 
 document.addEventListener("mousemove", function (event) {
-  cursor.style.left = event.pageX + "px";
-  cursor.style.top = event.pageY + "px";
+  cursor.style.transform = `translate3d(${event.pageX}px, ${event.pageY}px, 0)`;
 });
 
 // Hover Title
@@ -232,7 +231,7 @@ hoverTextDark.forEach(hoverItem => {
 const hoverImgs = document.querySelectorAll("[data-hover-img]");
 hoverImgs.forEach(hoverImg => {
   hoverImg.addEventListener("mouseover", function () {
-    cursorInner.innerHTML =  "<img src='" + hoverImg.getAttribute('data-hover-img') + "'>";
+    cursorInner.innerHTML = "<img src='" + hoverImg.getAttribute('data-hover-img') + "'>";
     cursorInner.classList.add("visible");
   });
   hoverImg.addEventListener("mouseout", function () {
@@ -251,7 +250,7 @@ if (fm) {
   var fmClose = document.querySelector(".fm-close");
 
   // Open //
-  fmToggle.addEventListener("click", function() {
+  fmToggle.addEventListener("click", function () {
     if (fm.classList.contains("show")) {
       fm.classList.remove("show");
     } else {
@@ -260,7 +259,7 @@ if (fm) {
   });
 
   // Close //
-  fmClose.addEventListener("click", function() {
+  fmClose.addEventListener("click", function () {
     fm.classList.remove("show");
     fmToggle.classList.remove("fm-toggle-hide");
   });
@@ -279,7 +278,7 @@ var c, currentScrollTop = 0;
 // Sticky - Auto Hide //
 //
 if (headerSticky) {
-  window.addEventListener("scroll", function() {
+  window.addEventListener("scroll", function () {
     var a = window.pageYOffset;
     currentScrollTop = a;
 
@@ -337,28 +336,28 @@ if (document.querySelector(".header-xl.sticky:not(.transparent-light, .transpare
 // Transparent //
 //
 if (document.querySelector(".header.transparent-light")) {
-  window.addEventListener("scroll", function() {
+  window.addEventListener("scroll", function () {
     var headerFixed = document.querySelectorAll(".header.sticky-autohide, .header.sticky");
     if (window.pageYOffset > 10) {
-      headerFixed.forEach(function(header) {
+      headerFixed.forEach(function (header) {
         header.classList.remove("transparent-light");
       });
     } else {
-      headerFixed.forEach(function(header) {
+      headerFixed.forEach(function (header) {
         header.classList.add("transparent-light");
       });
     }
   });
 }
 if (document.querySelector(".header.transparent-dark")) {
-  window.addEventListener("scroll", function() {
+  window.addEventListener("scroll", function () {
     var headerFixed = document.querySelectorAll(".header.sticky-autohide, .header.sticky");
     if (window.pageYOffset > 10) {
-      headerFixed.forEach(function(header) {
+      headerFixed.forEach(function (header) {
         header.classList.remove("transparent-dark");
       });
     } else {
-      headerFixed.forEach(function(header) {
+      headerFixed.forEach(function (header) {
         header.classList.add("transparent-dark");
       });
     }
@@ -371,7 +370,7 @@ if (document.querySelector(".header.transparent-dark")) {
 var mobileMenuToggle = document.querySelector(".mobile-menu-toggle");
 
 if (mobileMenuToggle) {
-  mobileMenuToggle.addEventListener("click", function() {
+  mobileMenuToggle.addEventListener("click", function () {
     if (header.classList.contains("header-menu-show")) {
       header.classList.remove("header-menu-show");
       mobileMenuToggle.classList.remove("toggle-close");
@@ -382,7 +381,7 @@ if (mobileMenuToggle) {
   });
 }
 if (header) {
-  document.addEventListener("click", function(e) {
+  document.addEventListener("click", function (e) {
     if (!e.target.closest(".header-menu, .mobile-menu-toggle")) {
       if (header.classList.contains("header-menu-show")) {
         header.classList.remove("header-menu-show");
@@ -401,28 +400,28 @@ if (document.querySelector(".nav-dropdown")) {
   var navSubdropdowns = document.querySelectorAll(".nav-subdropdown");
   var navMegaDropdowns = document.querySelectorAll(".mega-nav-dropdown");
 
-  navDropdowns.forEach(function(navDropdown) {
+  navDropdowns.forEach(function (navDropdown) {
     var parentNavItem = navDropdown.parentNode;
     parentNavItem.insertAdjacentHTML("beforeend", '<div class="nav-dropdown-toggle"><i class="fa-solid fa-angle-down"></i></div>');
   });
 
-  navSubdropdowns.forEach(function(navSubdropdown) {
+  navSubdropdowns.forEach(function (navSubdropdown) {
     var parentNavDropdownItem = navSubdropdown.parentNode;
     parentNavDropdownItem.classList.add("dropdown-icon-space");
     parentNavDropdownItem.insertAdjacentHTML("beforeend", '<div class="nav-subdropdown-toggle"><i class="fa-solid fa-angle-right"></i></div>');
   });
 
-  navMegaDropdowns.forEach(function(navMegaDropdown) {
+  navMegaDropdowns.forEach(function (navMegaDropdown) {
     var parentNavItem = navMegaDropdown.parentNode;
     parentNavItem.insertAdjacentHTML("beforeend", '<div class="nav-megadropdown-toggle"><i class="fa-solid fa-angle-down"></i></div>');
   });
 
   var navDropdownToggles = document.querySelectorAll(".nav-dropdown-toggle");
-  navDropdownToggles.forEach(function(navDropdownToggle) {
+  navDropdownToggles.forEach(function (navDropdownToggle) {
     var parentNavItem = navDropdownToggle.parentNode;
     var navDropdown = parentNavItem.querySelector(".nav-dropdown");
 
-    navDropdownToggle.addEventListener("click", function(e) {
+    navDropdownToggle.addEventListener("click", function (e) {
       if (navDropdownToggle.classList.contains("active")) {
         navDropdownToggle.classList.remove("active");
         navDropdown.classList.remove("show");
@@ -435,11 +434,11 @@ if (document.querySelector(".nav-dropdown")) {
   });
 
   var navSubdropdownToggles = document.querySelectorAll(".nav-subdropdown-toggle");
-  navSubdropdownToggles.forEach(function(navSubdropdownToggle) {
+  navSubdropdownToggles.forEach(function (navSubdropdownToggle) {
     var parentNavDropdownItem = navSubdropdownToggle.parentNode;
     var navSubdropdown = parentNavDropdownItem.querySelector(".nav-subdropdown");
 
-    navSubdropdownToggle.addEventListener("click", function(e) {
+    navSubdropdownToggle.addEventListener("click", function (e) {
       if (navSubdropdownToggle.classList.contains("active")) {
         navSubdropdownToggle.classList.remove("active");
         navSubdropdown.classList.remove("show");
@@ -452,11 +451,11 @@ if (document.querySelector(".nav-dropdown")) {
   });
 
   var navMegaDropdownToggles = document.querySelectorAll(".nav-megadropdown-toggle");
-  navMegaDropdownToggles.forEach(function(navMegaDropdownToggle) {
+  navMegaDropdownToggles.forEach(function (navMegaDropdownToggle) {
     var parentNavItem = navMegaDropdownToggle.parentNode;
     var navMegaDropdown = parentNavItem.querySelector(".mega-nav-dropdown");
 
-    navMegaDropdownToggle.addEventListener("click", function(e) {
+    navMegaDropdownToggle.addEventListener("click", function (e) {
       if (navMegaDropdownToggle.classList.contains("active")) {
         navMegaDropdownToggle.classList.remove("active");
         navMegaDropdown.classList.remove("show");
@@ -482,14 +481,14 @@ const lightbox = GLightbox();
 var mapCanvas = $(".gmap");
 
 if (mapCanvas.length) {
-  var m,divId,initLatitude, initLongitude, map;
+  var m, divId, initLatitude, initLongitude, map;
 
   for (var i = 0; i < mapCanvas.length; i++) {
     m = mapCanvas[i];
 
     initLatitude = m.dataset["latitude"];
     initLongitude = m.dataset["longitude"];
-    divId = "#"+ m["id"];
+    divId = "#" + m["id"];
 
     map = new GMaps({
       el: divId,
@@ -498,13 +497,13 @@ if (mapCanvas.length) {
       zoom: 16,
       scrollwheel: false,
       styles: [
-          /* style your map at https://snazzymaps.com/editor and paste JSON here */
+        /* style your map at https://snazzymaps.com/editor and paste JSON here */
       ]
     });
 
     map.addMarker({
-      lat : initLatitude,
-      lng : initLongitude
+      lat: initLatitude,
+      lng: initLongitude
     });
   }
 }
@@ -517,7 +516,7 @@ if (window.matchMedia("(min-width: 1200px)").matches) {
   var parallaxBg = $(".parallax");
 
   if (parallaxBg.length) {
-    parallaxBg.each(function() {
+    parallaxBg.each(function () {
       $(this).parallaxie({
         speed: 0.2
       });
@@ -534,10 +533,10 @@ var pGrid = $(".portfolio-grid");
 if (pGrid.length) {
   var mixer = mixitup('.portfolio-grid', {
     selectors: {
-        target: '.portfolio-item'
+      target: '.portfolio-item'
     },
     animation: {
-        duration: 250
+      duration: 250
     }
   });
 }
@@ -550,12 +549,12 @@ var vPortfolioNav = document.querySelector(".vp-nav");
 var vPortfolioLinks = document.querySelectorAll(".vp-link");
 
 if (vPortfolioLinks) {
-  vPortfolioLinks.forEach(function(vPortfolioLink) {
-    vPortfolioLink.addEventListener("mouseenter", function() {
+  vPortfolioLinks.forEach(function (vPortfolioLink) {
+    vPortfolioLink.addEventListener("mouseenter", function () {
       var thisParent = this.parentElement;
       var vPortfolioChildrens = vPortfolioNav.querySelectorAll("li");
 
-      vPortfolioChildrens.forEach(function(child) {
+      vPortfolioChildrens.forEach(function (child) {
         child.classList.remove("active");
       });
 
@@ -572,7 +571,7 @@ $(".animated-progress div").each(function () {
   $(this).appear(function () {
     $(this).css("width", $(this).attr("data-progress") + "%");
     $(this).addClass("progress-show");
-  },{accX: 0, accY: -10})
+  }, { accX: 0, accY: -10 })
 });
 
 
@@ -589,7 +588,7 @@ var scrollTopBtn = document.querySelector(".scrolltotop");
 
 if (scrollTopBtn) {
   // Show, Hide //
-  window.addEventListener("scroll", function() {
+  window.addEventListener("scroll", function () {
     if (window.scrollY > 700) { // 700px from top
       scrollTopBtn.classList.add("show");
     } else {
@@ -597,7 +596,7 @@ if (scrollTopBtn) {
     }
   });
   // Scroll to top on click //
-  scrollTopBtn.addEventListener("click", function() {
+  scrollTopBtn.addEventListener("click", function () {
     window.scrollTo({
       top: 0,
     });

@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="cs">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#ff2f78">
+    <meta name="robots" content="noindex, follow">
+    <title>Stránka nenalezena | WebdesAIn</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <!-- CSS -->
+    <link href="template/assets/plugins/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="template/assets/css/theme.css" rel="stylesheet">
+    <link href="assets/css/custom.css" rel="stylesheet">
+    <link href="template/assets/plugins/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+
+    <style>
+        .error-page {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(135deg, #E3F5EF 0%, #FFF0F3 100%);
+        }
+
+        .error-icon {
+            font-size: 8rem;
+            color: #ff2f78;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .error-content h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .error-content p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+
+<body class="bg-iceblue">
+    <div class="error-page">
+        <div class="container">
+            <div class="error-content" data-scrollcue="fadeIn">
+                <i class="bi bi-emoji-frown error-icon"></i>
+                <h1>Ups! Tudy cesta nevede</h1>
+                <p>Stránka, kterou hledáte, se nejspíš toulá někde v digitálním časoprostoru.</p>
+                <a href="index.html" class="button button-lg button-gradient-3 button-rounded button-hover-slide">
+                    <span data-text="Zpět na hlavní stránku">Zpět na hlavní stránku</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS -->
+    <script src="template/assets/plugins/scrollcue/scrollcue.js"></script>
+    <script>
+        scrollCue.init();
+    </script>
+</body>
+
+</html>

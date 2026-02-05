@@ -5,21 +5,53 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="theme-color" content="#ff2f78">
+
+	<!-- Preload LCP Images -->
+	<link rel="preload" as="image" href="template/assets/images/magdalenab_m.webp" media="(max-width: 767px)">
+	<link rel="preload" as="image" href="template/assets/images/magdalenab.webp" media="(min-width: 768px)">
 	<meta name="description"
 		content="WebdesAIn - Tvorba webových stránek v době AI. Online kurz zaměřený na využití umělé inteligence při tvorbě moderních webových stránek.">
 	<meta name="keywords" content="webdesign, AI, umělá inteligence, Claude, tvorba webů, kurz, online kurz">
+	<link rel="canonical" href="https://webdesain.cz/">
+
+	<!-- Primary Meta Tags -->
 	<title>WebdesAIn - Tvorba webových stránek v době AI</title>
+	<meta name="title" content="WebdesAIn - Tvorba webových stránek v době AI">
+
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://webdesain.cz/">
+	<meta property="og:title" content="WebdesAIn - Tvorba webových stránek v době AI">
+	<meta property="og:description"
+		content="Online kurz zaměřený na využití umělé inteligence při tvorbě moderních webových stránek.">
+	<meta property="og:image" content="https://webdesain.cz/template/assets/images/magdalenab.jpg">
+
+	<!-- Twitter -->
+	<meta property="twitter:card" content="summary_large_image">
+	<meta property="twitter:url" content="https://webdesain.cz/">
+	<meta property="twitter:title" content="WebdesAIn - Tvorba webových stránek v době AI">
+	<meta property="twitter:description"
+		content="Online kurz zaměřený na využití umělé inteligence při tvorbě moderních webových stránek.">
+	<meta property="twitter:image" content="https://webdesain.cz/template/assets/images/magdalenab.jpg">
 	<!-- Favicon -->
 	<link rel="icon" type="image/png" href="favicon.png">
 	<link rel="shortcut icon" href="favicon.png">
 	<link rel="apple-touch-icon" href="favicon.png">
 	<!-- CSS -->
 	<link href="template/assets/plugins/bootstrap/bootstrap.min.css" rel="stylesheet">
-	<link href="template/assets/plugins/glightbox/glightbox.min.css" rel="stylesheet">
-	<link href="template/assets/plugins/scrollcue/scrollcue.css" rel="stylesheet">
-	<link href="template/assets/plugins/swiper/swiper-bundle.min.css" rel="stylesheet">
+	<link href="template/assets/plugins/glightbox/glightbox.min.css" rel="stylesheet" media="print"
+		onload="this.media='all'">
+	<link href="template/assets/plugins/scrollcue/scrollcue.css" rel="stylesheet" media="print"
+		onload="this.media='all'">
+	<link href="template/assets/plugins/swiper/swiper-bundle.min.css" rel="stylesheet" media="print"
+		onload="this.media='all'">
 	<link href="template/assets/css/theme.css" rel="stylesheet">
 	<link href="assets/css/custom.css" rel="stylesheet">
+	<noscript>
+		<link href="template/assets/plugins/glightbox/glightbox.min.css" rel="stylesheet">
+		<link href="template/assets/plugins/scrollcue/scrollcue.css" rel="stylesheet">
+		<link href="template/assets/plugins/swiper/swiper-bundle.min.css" rel="stylesheet">
+	</noscript>
 	<!-- Google Fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,7 +61,48 @@
 	<!-- Fonts/Icons -->
 	<link href="template/assets/plugins/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
 	<link href="template/assets/plugins/fontawesome/css/all.css" rel="stylesheet">
-	<link href="template/assets/plugins/themify/themify-icons.css" rel="stylesheet">
+	<!-- Structured Data -->
+	<script type="application/ld+json">
+	{
+	  "@context": "https://schema.org",
+	  "@type": "Course",
+	  "name": "WebdesAIn - Tvorba webových stránek v době AI",
+	  "description": "Online kurz zaměřený na využití umělé inteligence při tvorbě moderních webových stránek metodou Vibe Coding.",
+	  "provider": {
+		"@type": "Person",
+		"name": "Magdaléna Boušková",
+		"sameAs": "https://webykvalitne.cz/"
+	  },
+	  "hasCourseInstance": [
+		{
+		  "@type": "CourseInstance",
+		  "courseMode": "Online",
+		  "courseWorkload": "PT10H",
+		  "name": "Online samostudium",
+		  "offers": {
+			"@type": "Offer",
+			"price": "8500",
+			"priceCurrency": "CZK"
+		  }
+		},
+		{
+		  "@type": "CourseInstance",
+		  "courseMode": "Blended",
+		  "location": {
+			"@type": "Place",
+			"name": "Kamenice u Prahy"
+		  },
+		  "name": "Živé školení",
+		  "offers": {
+			"@type": "Offer",
+			"price": "6500",
+			"priceCurrency": "CZK"
+		  }
+		}
+	  ]
+	}
+	</script>
+
 </head>
 
 <body class="bg-iceblue" data-preloader="light">
@@ -57,6 +130,9 @@
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="#cenik">Ceník</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#ukazky">Ukázky</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="#kontakt">Kontakt</a>
@@ -95,8 +171,8 @@
 								<p>praktických lekcí</p>
 							</div>
 							<div class="col-6 col-xl-12">
-								<h2 class="font-family-tertiary">8</h2>
-								<p>bonusových témat</p>
+								<h2 class="font-family-tertiary">5</h2>
+								<p>bonusových lekcí</p>
 							</div>
 						</div><!-- end row(inner) -->
 					</div>
@@ -104,8 +180,8 @@
 				<div class="mt-5">
 					<div class="img-mask-1">
 						<picture>
-							<source media="(max-width: 767px)" srcset="template/assets/images/magdalenab_m.jpg">
-							<img src="template/assets/images/magdalenab.jpg" alt="WebdesAIn Kurz">
+							<source media="(max-width: 767px)" srcset="template/assets/images/magdalenab_m.webp">
+							<img src="template/assets/images/magdalenab.webp" alt="WebdesAIn Kurz" decoding="async">
 						</picture>
 					</div>
 				</div>
@@ -235,8 +311,8 @@
 									<div>
 										<h5 class="mb-1">Založení složky v počítači</h5>
 										<ul class="list-inline-dot">
-											<li>Adresářová struktura</li>
-											<li>Adresář pro fotky a texty</li>
+											<li>Správná struktura složky</li>
+											<li>Jaké soubory vzniknou?</li>
 										</ul>
 									</div>
 								</div>
@@ -251,9 +327,7 @@
 									<div>
 										<h5 class="mb-1">Nástroje: Google Antigravity a Claude Code</h5>
 										<ul class="list-inline-dot">
-											<li>Instalace GA</li>
-											<li>Průvodce GA</li>
-											<li>Agent manažer</li>
+											<li>Google Antigravity</li>
 											<li>Claude Code</li>
 										</ul>
 									</div>
@@ -269,9 +343,8 @@
 									<div>
 										<h5 class="mb-1">Sepsání struktury a obsahu webu</h5>
 										<ul class="list-inline-dot">
-											<li>Menu webu</li>
-											<li>Hero sekce</li>
-											<li>Texty sekcí a stránek</li>
+											<li>Položky menu a texty</li>
+											<li>Redesign starého webu</li>
 										</ul>
 									</div>
 								</div>
@@ -286,8 +359,8 @@
 									<div>
 										<h5 class="mb-1">Příprava obrázků a ikon pro web</h5>
 										<ul class="list-inline-dot">
-											<li>Zdroj a úprava obrázků</li>
-											<li>Možnosti pro ikony</li>
+											<li>Obrázky</li>
+											<li>Ikony</li>
 										</ul>
 									</div>
 								</div>
@@ -302,9 +375,9 @@
 									<div>
 										<h5 class="mb-1">Určení designu webu</h5>
 										<ul class="list-inline-dot">
-											<li>Vzorový vzhled webu</li>
-											<li>Barvy</li>
-											<li>Fonty</li>
+											<li>Podle předlohy</li>
+											<li>Podle designových trendů</li>
+											<li>Podle vlastního stylu</li>
 										</ul>
 									</div>
 								</div>
@@ -319,9 +392,9 @@
 									<div>
 										<h5 class="mb-1">Přesné zadání a pokyn k výrobě pro AI agenta</h5>
 										<ul class="list-inline-dot">
-											<li>Soubor instrukce.md</li>
+											<li>Instrukce.md</li>
 											<li>Pokyn k tvorbě</li>
-											<li>Přístup Antigravity do Chromu</li>
+											<li>První vzhled webu</li>
 										</ul>
 									</div>
 								</div>
@@ -334,10 +407,12 @@
 										<i class="fa-solid fa-7"></i>
 									</div>
 									<div>
-										<h5 class="mb-1">Doladění designu webu s AI agentem</h5>
+										<h5 class="mb-1">Doladění webu s AI agentem</h5>
 										<ul class="list-inline-dot">
-											<li>Úprava obsahu i designu</li>
-											<li>Kontrola mobilní verze</li>
+											<li>Začít od začátku nebo ladit?</li>
+											<li>Možnosti, jak upravovat</li>
+											<li>Ladění mobilní verze</li>
+											<li>Další prvky na webu</li>
 										</ul>
 									</div>
 								</div>
@@ -352,10 +427,8 @@
 									<div>
 										<h5 class="mb-1">Technický audit webu</h5>
 										<ul class="list-inline-dot">
-											<li>SEO audit webu</li>
-											<li>Favicon</li>
-											<li>Chybová stránka 404</li>
-											<li>Cookie lišta</li>
+											<li>SEO audit</li>
+											<li>Kontrola dalších věcí</li>
 										</ul>
 									</div>
 								</div>
@@ -370,9 +443,9 @@
 									<div>
 										<h5 class="mb-1">Uložení verzí webu na GitHub</h5>
 										<ul class="list-inline-dot">
+											<li>GA - GitHub - Webkitty</li>
 											<li>Instalace Git</li>
-											<li>Přihlášení na GitHub</li>
-											<li>Uložení verzí webu</li>
+											<li>Verzování na GitHub</li>
 										</ul>
 									</div>
 								</div>
@@ -387,9 +460,8 @@
 									<div>
 										<h5 class="mb-1">Publikování webu na doméně</h5>
 										<ul class="list-inline-dot">
-											<li>SSL certifikát</li>
-											<li>Propojení Webkitty a&nbsp;GitHub</li>
-											<li>Ruční nahrání souborů na FTP</li>
+											<li>Web z PC na internet</li>
+											<li>Na Webkitty z GitHubu</li>
 										</ul>
 									</div>
 								</div>
@@ -399,7 +471,7 @@
 					<!-- Pravý sloupec - Bonusové lekce -->
 					<div class="col-12 col-lg-6">
 						<div class="bg-white p-4 p-lg-5 border-radius-1">
-							<h4 class="mb-4">8 bonusových lekcí</h4>
+							<h4 class="mb-4">5 bonusových lekcí</h4>
 							<!-- Bonus 1 -->
 							<div class="py-3">
 								<div class="d-flex">
@@ -409,8 +481,8 @@
 									<div>
 										<h5 class="mb-1">Dobrý obsah webu</h5>
 										<ul class="list-inline-dot">
-											<li>Tipy pro kvalitní obsah webu</li>
-											<li>Pravidla webového copywritingu</li>
+											<li>Tipy pro kvalitní obsah</li>
+											<li>Pravidla webového copy</li>
 											<li>Struktura webu</li>
 										</ul>
 									</div>
@@ -433,7 +505,7 @@
 								</div>
 							</div>
 							<hr class="hr-diagonal">
-							<!-- Bonus 3 -->
+							<!-- Bonus 3 
 							<div class="py-3">
 								<div class="d-flex">
 									<div class="pe-3 icon-2xl">
@@ -443,13 +515,12 @@
 										<h5 class="mb-1">Slovník webaře</h5>
 										<ul class="list-inline-dot">
 											<li>Pojmy pro tvorbu webu</li>
-											<li>Společná řeč s&nbsp;AI agentem</li>
 										</ul>
 									</div>
 								</div>
 							</div>
-							<hr class="hr-diagonal">
-							<!-- Bonus 4 -->
+							<hr class="hr-diagonal">-->
+							<!-- Bonus 4 
 							<div class="py-3">
 								<div class="d-flex">
 									<div class="pe-3 icon-2xl">
@@ -458,14 +529,14 @@
 									<div>
 										<h5 class="mb-1">Malý vhled do kódování</h5>
 										<ul class="list-inline-dot">
-											<li>Základy HTML a CSS</li>
-											<li>Adresářová struktura webu</li>
+											<li>Základy HTML</li>
+											<li>Základy CSS</li>
 										</ul>
 									</div>
 								</div>
 							</div>
-							<hr class="hr-diagonal">
-							<!-- Bonus 5 -->
+							<hr class="hr-diagonal">-->
+							<!-- Bonus 5 
 							<div class="py-3">
 								<div class="d-flex">
 									<div class="pe-3 icon-2xl">
@@ -477,11 +548,10 @@
 											<li>Prodejní formuláře</li>
 											<li>Rezervace služeb</li>
 											<li>Objednání konzultace</li>
-											<li>Emailing</li>
 										</ul>
 									</div>
 								</div>
-							</div>
+							</div>-->
 							<hr class="hr-diagonal">
 							<!-- Bonus 6 -->
 							<div class="py-3">
@@ -495,6 +565,7 @@
 											<li>Google Search Console</li>
 											<li>Strukturovaná data</li>
 											<li>Cookie lišta</li>
+											<li>Prodejní a rezervační formuláře</li>
 										</ul>
 									</div>
 								</div>
@@ -511,8 +582,8 @@
 										<ul class="list-inline-dot">
 											<li>Výběr balíčku</li>
 											<li>Založení emailu</li>
-											<li>DNS</li>
 											<li>Smazání subdomény</li>
+											<li>SSL certifikát</li>
 										</ul>
 									</div>
 								</div>
@@ -527,9 +598,9 @@
 									<div>
 										<h5 class="mb-1">Tvorba webu pro jiné</h5>
 										<ul class="list-inline-dot">
-											<li>Podmínky</li>
-											<li>Podklady</li>
-											<li>Fakturace</li>
+											<li>Dohodnuté podmínky</li>
+											<li>Podklady od klienta</li>
+											<li>Fakturace a výkazy</li>
 											<li>Doplňkové služby</li>
 										</ul>
 									</div>
@@ -550,7 +621,8 @@
 				<div class="row g-4 g-xl-5 align-items-center">
 					<div class="col-12 col-lg-5">
 						<div class="img-mask-1">
-							<img src="template/assets/images/magdab1.jpg" alt="Magdaléna Boušková">
+							<img src="template/assets/images/magdab1.jpg" alt="Magdaléna Boušková" loading="lazy"
+								decoding="async">
 						</div>
 					</div>
 					<div class="col-12 col-lg-7">
@@ -643,7 +715,8 @@
 												a&nbsp;esteticky příjemného řešení.</p>
 										</div>
 										<div class="quote-author">
-											<img src="template/assets/images/marketa.jpg" alt="Markéta Fiala">
+											<img src="template/assets/images/marketa.jpg" alt="Markéta Fiala"
+												loading="lazy" decoding="async">
 											<div class="ps-3">
 												<h6 class="sm-heading mb-0">Markéta Fiala</h6>
 											</div>
@@ -664,7 +737,8 @@
 												cenných rad od výborné mentorky. Děkuji.</p>
 										</div>
 										<div class="quote-author">
-											<img src="template/assets/images/magdak.avif" alt="Magda Kadlecová">
+											<img src="template/assets/images/magdak.avif" alt="Magda Kadlecová"
+												loading="lazy" decoding="async">
 											<div class="ps-3">
 												<h6 class="sm-heading mb-0">Magda Kadlecová</h6>
 											</div>
@@ -684,7 +758,8 @@
 												a&nbsp;nejvíc způsobu, jakým vše děláš. Jsem tvůj člověk.</p>
 										</div>
 										<div class="quote-author">
-											<img src="template/assets/images/luciek.jpeg" alt="Lucie Kratochvílová">
+											<img src="template/assets/images/luciek.jpeg" alt="Lucie Kratochvílová"
+												loading="lazy" decoding="async">
 											<div class="ps-3">
 												<h6 class="sm-heading mb-0">Lucie Kratochvílová</h6>
 											</div>
@@ -717,15 +792,18 @@
 							</div>
 							<h4 class="mb-3 text-center">Živé školení</h4>
 							<ul class="list-border-dashed mt-3">
-								<li><i class="bi bi-check2-circle text-green me-2"></i>Pouze pro zkušené webaře</li>
-								<li><i class="bi bi-check2-circle text-green me-2"></i>Termín: 27. ledna 2026</li>
+								<li><i class="bi bi-check2-circle text-green me-2"></i>Pro lidi se zkušenosti s weby
+								</li>
+								<li><i class="bi bi-check2-circle text-green me-2"></i>Termín: 17. února</li>
 								<li><i class="bi bi-check2-circle text-green me-2"></i>Místo: Kamenice u Prahy</li>
 								<li><i class="bi bi-check2-circle text-green me-2"></i>Rovnou si postavíte web</li>
 								<li><i class="bi bi-check2-circle text-green me-2"></i>Přímá podpora lektorky</li>
 								<li><i class="bi bi-check2-circle text-green me-2"></i>Networking s dalšími webaři</li>
+								<li><i class="bi bi-check2-circle text-green me-2"></i>Sleva pro absolventy WP kurzů
+								</li>
 							</ul>
 							<div class="text-center">
-								<h3 class="font-family-tertiary mt-3 mb-0">od 4 500 Kč</h3>
+								<h3 class="font-family-tertiary mt-3 mb-0">6 500 Kč</h3>
 							</div>
 							<a class="button button-lg button-fullwidth button-rounded button-dark button-hover-slide button-shadow mt-4"
 								href="https://webykvalitne.cz/vibe-coding-zive-skoleni/" target="_blank"><span
@@ -746,11 +824,11 @@
 								</li>
 								<li><i class="bi bi-check2-circle me-2"></i>Nahrané video lekce</li>
 								<li><i class="bi bi-check2-circle me-2"></i>Podpora formou online klubu</li>
-								<li><i class="bi bi-check2-circle me-2"></i>Velká sleva pro mé absolventy
+								<li><i class="bi bi-check2-circle me-2"></i>Sleva pro absolventy WP kurzů
 								</li>
 							</ul>
 							<div class="text-center">
-								<h3 class="font-family-tertiary mt-3 mb-0">7 500 Kč</h3>
+								<h3 class="font-family-tertiary mt-3 mb-0">8 500 Kč</h3>
 							</div>
 							<p class="text-center mt-4 mb-0" style="color: #fff; font-style: italic; opacity: 0.8;">
 								V prodeji od 15. února
@@ -778,7 +856,8 @@
 								</li>
 							</ul>
 							<div class="text-center">
-								<h3 class="font-family-tertiary mt-3 mb-0">od 8700 Kč</h3>
+								<h3 class="font-family-tertiary mt-3 mb-0"><s>29 000 Kč</s></h3>
+								<h3 class="font-family-tertiary mb-0">8 700 Kč</h3>
 							</div>
 							<p class="text-center mt-4 mb-0" style="color: #666; font-style: italic;">Čeká se na obnovu
 								dotací
@@ -791,40 +870,156 @@
 		</div>
 		<!-- end Pricing section -->
 
+		<!-- Ukázka webu section -->
+		<div id="ukazky" class="section-spacing">
+			<div class="container">
+				<div class="text-center mb-5">
+					<h2 class="font-family-tertiary">Ukázky webů, které vznikly Vibe Codingem</h2>
+					<p class="mt-3">(samozřejmě web, na kterém právě jste, tak vznikl také)</p>
+				</div>
+				<div class="row g-4 justify-content-center">
+					<div class="col-12 col-md-6">
+						<div class="bg-white p-4 border-radius-1">
+							<div class="website-preview-scroll">
+								<img src="template/assets/images/alkastan.webp" alt="Ukázka webu Alkastan" class="w-100"
+									loading="lazy" decoding="async">
+							</div>
+						</div>
+					</div>
+					<div class="col-12 col-md-6">
+						<div class="bg-white p-4 border-radius-1">
+							<div class="website-preview-scroll">
+								<img src="template/assets/images/seznamka.webp" alt="Ukázka webu Seznamka" class="w-100"
+									loading="lazy" decoding="async">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end Ukázka webu section -->
+
 		<!-- Footer -->
 		<div id="kontakt" class="bg-black">
-			<div class="section-spacing-sm">
+			<div class="section-spacing">
 				<div class="container">
-					<div class="row g-4 g-lg-5">
-						<div class="col-12 col-lg-4">
-							<img src="template/assets/images/logo_webdesain_bile.png" alt="WebdesAIn"
-								style="height: 40px; width: auto; margin-bottom: 20px;">
-							<p>Tvorba webových stránek v&nbsp;době AI. <br>Kurz pro všechny, kteří chtějí využít
-								sílu
-								umělé&nbsp;inteligence při tvorbě webů.</p>
+					<div class="row g-4 g-lg-5 align-items-center">
+						<!-- Formulář vlevo -->
+						<div class="col-12 col-lg-7">
+							<div class="bg-white p-4 p-md-5 border-radius-1" data-cue="fadeIn">
+								<h2 class="font-family-tertiary mb-4 text-black text-center">Napište mi</h2>
+								<form id="contact-form" action="https://formspree.io/f/mpqlvvbb" method="POST">
+									<div id="form-content">
+										<div class="row g-3">
+											<div class="col-12 col-md-6">
+												<label class="form-label text-black">Vaše jméno</label>
+												<input type="text" name="name" class="form-control"
+													placeholder="Jméno a příjmení" required>
+											</div>
+											<div class="col-12 col-md-6">
+												<label class="form-label text-black">Váš e-mail</label>
+												<input type="email" name="email" class="form-control"
+													placeholder="email@priklad.cz" required>
+											</div>
+											<div class="col-12">
+												<label class="form-label text-black">Zpráva</label>
+												<textarea name="message" class="form-control" rows="4"
+													placeholder="S čím vám mohu pomoci?" required></textarea>
+											</div>
+											<!-- Honeypot pro ochranu proti spamu -->
+											<input type="text" name="_gotcha" style="display:none">
+											<div class="col-12">
+												<button id="form-submit" type="submit"
+													class="button button-lg button-gradient-3 button-rounded button-hover-slide w-100">
+													<span data-text="Odeslat zprávu">Odeslat zprávu</span>
+												</button>
+											</div>
+										</div>
+									</div>
+									<div id="form-status" style="display:none;" class="text-center py-4">
+										<i class="bi bi-check-circle text-success" style="font-size: 3rem;"></i>
+										<h3 class="text-black mt-3">Děkuji za zprávu!</h3>
+										<p class="text-black">Ozvu se vám co nejdříve zpět.</p>
+									</div>
+								</form>
+
+								<script>
+									var form = document.getElementById("contact-form");
+
+									async function handleSubmit(event) {
+										event.preventDefault();
+										var status = document.getElementById("form-status");
+										var content = document.getElementById("form-content");
+										var data = new FormData(event.target);
+										var btn = document.getElementById("form-submit");
+										var originalText = btn.innerHTML;
+
+										btn.disabled = true;
+										btn.innerHTML = '<span>Odesílám...</span>';
+
+										fetch(event.target.action, {
+											method: form.method,
+											body: data,
+											headers: {
+												'Accept': 'application/json'
+											}
+										}).then(response => {
+											if (response.ok) {
+												status.style.display = "block";
+												content.style.display = "none";
+												form.reset();
+											} else {
+												response.json().then(data => {
+													if (Object.hasOwn(data, 'errors')) {
+														alert(data["errors"].map(error => error["message"]).join(", "));
+													} else {
+														alert("Ups! Při odesílání došlo k chybě.");
+													}
+													btn.disabled = false;
+													btn.innerHTML = originalText;
+												})
+											}
+										}).catch(error => {
+											alert("Ups! Při odesílání došlo k chybě.");
+											btn.disabled = false;
+											btn.innerHTML = originalText;
+										});
+									}
+									form.addEventListener("submit", handleSubmit)
+								</script>
+							</div>
 						</div>
-						<div class="col-12 col-md-6 col-lg-4">
-							<p class="sm-heading">Email:</p>
-							<h4>magdalena@strategickyweb.cz</h4>
-							<p>Odpovídám do 24 hodin</p>
+						<!-- Informace vpravo -->
+						<div class="col-12 col-lg-5 text-white">
+							<div class="ps-lg-4" data-cue="fadeIn">
+								<img src="template/assets/images/logo_webdesain_bile.png" alt="WebdesAIn"
+									style="height: 40px; width: auto; margin-bottom: 20px;">
+								<p class="mb-5">Tvorba webových stránek v&nbsp;době AI. <br>Kurz pro všechny, kteří
+									chtějí využít
+									sílu umělé&nbsp;inteligence při tvorbě webů.</p>
+
+								<div class="mb-4">
+									<p class="sm-heading mb-1">Email:</p>
+									<h4 class="text-white">magdalena@strategickyweb.cz</h4>
+									<p>Odpovídám do 24 hodin</p>
+								</div>
+
+								<div>
+									<p class="sm-heading mb-1">Lektorka:</p>
+									<h4 class="text-white">Magdaléna Boušková</h4>
+									<p>Webová mentorka</p>
+								</div>
+							</div>
 						</div>
-						<div class="col-12 col-md-6 col-lg-4">
-							<p class="sm-heading">Lektorka:</p>
-							<h4>Magdaléna Boušková</h4>
-							<p>Webová mentorka</p>
-						</div>
-					</div><!-- end row -->
-				</div><!-- end container -->
+					</div>
+				</div>
 			</div>
 			<div class="container">
 				<hr class="hr-diagonal">
 				<div class="py-4">
 					<div class="row g-2">
-						<div class="col-12 col-md-6 text-center text-md-start">
-							<p>&copy; 2025 WebdesAIn</p>
-						</div>
-						<div class="col-12 col-md-6 text-center text-md-end">
-
+						<div class="col-12 text-center text-md-end">
+							<p class="small opacity-50">&copy; 2026 WebdesAIn</p>
 						</div>
 					</div><!-- end row -->
 				</div>
@@ -847,9 +1042,9 @@
 	<!-- end Scroll to Top -->
 
 	<!-- JavaScripts -->
-	<script src="template/assets/plugins/jquery.min.js"></script>
-	<script src="template/assets/plugins/plugins.js"></script>
-	<script src="template/assets/js/functions.js"></script>
+	<script src="template/assets/plugins/jquery.min.js" defer></script>
+	<script src="template/assets/plugins/plugins.js" defer></script>
+	<script src="template/assets/js/functions.js" defer></script>
 </body>
 
 </html>
