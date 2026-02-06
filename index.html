@@ -677,7 +677,7 @@
 				<div class="row g-4 g-lg-5 align-items-center">
 					<div class="col-12 col-lg-5 col-xl-4">
 						<h2 class="font-family-tertiary">Co říkají absolventi kurzu <a href="https://webykvalitne.cz/"
-								target="_blank">mých kurzů</a>?</h2>
+								target="_blank" rel="noopener noreferrer">mých kurzů</a>?</h2>
 						<ul class="list-inline mt-3">
 							<li>
 								<a class="button-circle button-circle-dark button-circle-hover-slide testimonial-slider-2-prev"
@@ -806,7 +806,7 @@
 								<h3 class="font-family-tertiary mt-3 mb-0">6 500 Kč</h3>
 							</div>
 							<a class="button button-lg button-fullwidth button-rounded button-dark button-hover-slide button-shadow mt-4"
-								href="https://webykvalitne.cz/vibe-coding-zive-skoleni/" target="_blank"><span
+								href="https://webykvalitne.cz/vibe-coding-zive-skoleni/" target="_blank" rel="noopener noreferrer"><span
 									data-text="Mám zájem">Mám zájem</span></a>
 						</div>
 					</div>
@@ -927,7 +927,7 @@
 													placeholder="S čím vám mohu pomoci?" required></textarea>
 											</div>
 											<!-- Honeypot pro ochranu proti spamu -->
-											<input type="text" name="_gotcha" style="display:none">
+											<input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
 											<div class="col-12">
 												<button id="form-submit" type="submit"
 													class="button button-lg button-gradient-3 button-rounded button-hover-slide w-100">
@@ -1000,7 +1000,12 @@
 
 								<div class="mb-4">
 									<p class="sm-heading mb-1">Email:</p>
-									<h4 class="text-white">magdalena@strategickyweb.cz</h4>
+									<h4 class="text-white"><a href="#" class="text-white text-decoration-none" id="email-link" onclick="this.href='mailto:' + 'magdalena' + '@' + 'strategickyweb.cz'; return true;">
+										<span id="email-text"></span>
+									</a></h4>
+									<script>
+										document.getElementById('email-text').textContent = 'magdalena' + '@' + 'strategickyweb.cz';
+									</script>
 									<p>Odpovídám do 24 hodin</p>
 								</div>
 

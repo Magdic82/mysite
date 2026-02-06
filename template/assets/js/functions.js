@@ -183,10 +183,34 @@ document.addEventListener("mousemove", function (event) {
   cursor.style.transform = `translate3d(${event.pageX}px, ${event.pageY}px, 0)`;
 });
 
+// Helper function to sanitize text (prevent XSS)
+function sanitizeText(str) {
+  if (!str) return '';
+  var div = document.createElement('div');
+  div.textContent = str;
+  return div.innerHTML;
+}
+
+// Helper function to sanitize URL (prevent XSS)
+function sanitizeUrl(url) {
+  if (!url) return '';
+  // Only allow http, https, and relative URLs
+  if (url.match(/^(https?:\/\/|\/)/i) || !url.includes(':')) {
+    return encodeURI(url);
+  }
+  return '';
+}
+
 // Hover Title
 hoverTitle.forEach(hoverItem => {
   hoverItem.addEventListener("mouseover", function () {
-    cursorInner.innerHTML = "<div class='mouse-caption'><h2>" + hoverItem.getAttribute('data-hover-title') + "</h2></div>";
+    var caption = document.createElement('div');
+    caption.className = 'mouse-caption';
+    var h2 = document.createElement('h2');
+    h2.textContent = hoverItem.getAttribute('data-hover-title') || '';
+    caption.appendChild(h2);
+    cursorInner.innerHTML = '';
+    cursorInner.appendChild(caption);
     cursorInner.classList.add("visible");
   });
   hoverItem.addEventListener("mouseout", function () {
@@ -197,7 +221,13 @@ hoverTitle.forEach(hoverItem => {
 // Hover Title Dark
 hoverTitleDark.forEach(hoverItem => {
   hoverItem.addEventListener("mouseover", function () {
-    cursorInner.innerHTML = "<div class='mouse-caption mouse-caption-dark'><h2>" + hoverItem.getAttribute('data-hover-title-dark') + "</h2></div>";
+    var caption = document.createElement('div');
+    caption.className = 'mouse-caption mouse-caption-dark';
+    var h2 = document.createElement('h2');
+    h2.textContent = hoverItem.getAttribute('data-hover-title-dark') || '';
+    caption.appendChild(h2);
+    cursorInner.innerHTML = '';
+    cursorInner.appendChild(caption);
     cursorInner.classList.add("visible");
   });
   hoverItem.addEventListener("mouseout", function () {
@@ -208,7 +238,13 @@ hoverTitleDark.forEach(hoverItem => {
 // Hover Text
 hoverText.forEach(hoverItem => {
   hoverItem.addEventListener("mouseover", function () {
-    cursorInner.innerHTML = "<div class='mouse-caption'><h5>" + hoverItem.getAttribute('data-hover-text') + "</h5></div>";
+    var caption = document.createElement('div');
+    caption.className = 'mouse-caption';
+    var h5 = document.createElement('h5');
+    h5.textContent = hoverItem.getAttribute('data-hover-text') || '';
+    caption.appendChild(h5);
+    cursorInner.innerHTML = '';
+    cursorInner.appendChild(caption);
     cursorInner.classList.add("visible");
   });
   hoverItem.addEventListener("mouseout", function () {
@@ -219,7 +255,13 @@ hoverText.forEach(hoverItem => {
 // Hover Text Dark
 hoverTextDark.forEach(hoverItem => {
   hoverItem.addEventListener("mouseover", function () {
-    cursorInner.innerHTML = "<div class='mouse-caption mouse-caption-dark'><h5>" + hoverItem.getAttribute('data-hover-text-dark') + "</h5></div>";
+    var caption = document.createElement('div');
+    caption.className = 'mouse-caption mouse-caption-dark';
+    var h5 = document.createElement('h5');
+    h5.textContent = hoverItem.getAttribute('data-hover-text-dark') || '';
+    caption.appendChild(h5);
+    cursorInner.innerHTML = '';
+    cursorInner.appendChild(caption);
     cursorInner.classList.add("visible");
   });
   hoverItem.addEventListener("mouseout", function () {
@@ -231,8 +273,14 @@ hoverTextDark.forEach(hoverItem => {
 const hoverImgs = document.querySelectorAll("[data-hover-img]");
 hoverImgs.forEach(hoverImg => {
   hoverImg.addEventListener("mouseover", function () {
-    cursorInner.innerHTML = "<img src='" + hoverImg.getAttribute('data-hover-img') + "'>";
-    cursorInner.classList.add("visible");
+    var imgSrc = sanitizeUrl(hoverImg.getAttribute('data-hover-img'));
+    if (imgSrc) {
+      var img = document.createElement('img');
+      img.src = imgSrc;
+      cursorInner.innerHTML = '';
+      cursorInner.appendChild(img);
+      cursorInner.classList.add("visible");
+    }
   });
   hoverImg.addEventListener("mouseout", function () {
     cursorInner.innerHTML = "";
