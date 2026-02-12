@@ -1054,23 +1054,22 @@
 									chtějí využít
 									výhody umělé&nbsp;inteligence při tvorbě webů.</p>
 
-								<div class="mb-4">
-									<p class="sm-heading mb-1">Email:</p>
-									<h4 class="text-white"><a href="#" class="text-white text-decoration-none"
-											id="email-link"
-											onclick="this.href='mailto:' + 'magdalena' + '@' + 'strategickyweb.cz'; return true;">
-											<span id="email-text"></span>
-										</a></h4>
-									<script>
-										document.getElementById('email-text').textContent = 'magdalena' + '@' + 'strategickyweb.cz';
-									</script>
-									<p>Odpovídám do 24 hodin</p>
-								</div>
-
 								<div>
-									<p class="sm-heading mb-1">Lektorka:</p>
-									<h4 class="text-white">Magdaléna Boušková</h4>
-									<p>Webová mentorka</p>
+									<p class="sm-heading mb-1">KONTAKT NA LEKTORKU:</p>
+									<h4 class="text-white mb-1">Magdaléna Boušková</h4>
+									<p class="mb-1">
+										<a id="email-link" href="#" class="text-decoration-none contact-link"></a>
+									</p>
+									<p class="mb-0"><a href="tel:+420731552151"
+											class="text-decoration-none contact-link">731 552 151</a></p>
+									<script>
+											(function () {
+												var email = 'magdalena' + '@' + 'strategickyweb.cz';
+												var link = document.getElementById('email-link');
+												link.href = 'mailto:' + email;
+												link.textContent = email;
+											})();
+									</script>
 								</div>
 							</div>
 						</div>

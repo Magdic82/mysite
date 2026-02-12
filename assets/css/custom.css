@@ -688,3 +688,13 @@ main {
         margin-top: 50px !important;
     }
 }
+
+/* Hover effect for contact links */
+.contact-link {
+    color: #fff !important;
+    transition: color 0.3s ease !important;
+}
+
+.contact-link:hover {
+    color: #ff2f78 !important;
+}
